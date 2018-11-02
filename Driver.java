@@ -4,7 +4,7 @@ public class Driver{
       NONULLARRAYLIST
 */
     // TESTING CONSTRUCTORS AND NULL CASES
-    System.out.println("First thing's first: No Nulls!");
+    System.out.println("First thing's first: No Nulls! \n");
 
     NoNullArrayList<String> fruity = new NoNullArrayList<String>(20);
     fruity.add("apples");
@@ -51,5 +51,32 @@ public class Driver{
 //    veggie.add(null); UNCOMMENT TO TEST NULL CASES THIS SHOULD BE THROWN BACK
     System.out.println("Our long list of veggies should be: \n[kale, carrots, lettuce, eggplant, spinach, bok choy, pumpkin, squash]");
     System.out.println("Your veggies are: \n" + veggie.toString() + "\n");
+
+/*
+      ORDEREDARRAYLIST
+*/
+    // TESTING CONSTRUCTORS
+    System.out.println("Now, we need some law and order. \n");
+    OrderedArrayList<String> desserts = new OrderedArrayList<String>(20);
+    desserts.add("Chocolate");
+    desserts.add("Ice Cream");
+    desserts.add("Cheesecake");
+    desserts.add("Tiramasu");
+    System.out.println("Because we want some order, our desserts should be: \n[Cheesecake, Chocolate, Ice Cream, Tiramasu]");
+    System.out.println("Your delicious desserts are: \n" + desserts.toString() + "\n");
+
+    // TESTING SETTING
+    System.out.println("But do we REALLY want that...?");
+    desserts.set(0, "Lava Cake");
+    desserts.set(1, "Waffles");
+    System.out.println("Change of mind, our desserts should be: \n[Chocolate, Lava Cake, Tiramasu, Waffles]");
+    System.out.println("Your delicious desserts are: \n" + desserts.toString() + "\n");
+
+    // TESTING ADDING
+    System.out.println("We visit grandma... and we all know what happens when we visit grandma!");
+    desserts.add(3, "Froyo");
+    desserts.add(0, "Warm Cookies");
+    System.out.println("We are now a good twenty pounds heavier and our desserts should be: \n[Chocolate, Froyo, Lava Cake, Tiramasu, Waffles, Warm Cookies]");
+    System.out.println("Your delicious desserts are: \n" + desserts.toString());
   }
 }
