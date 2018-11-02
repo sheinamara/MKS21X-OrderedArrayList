@@ -18,7 +18,7 @@ public class Driver{
     veggie.add("carrots");
     veggie.add("spinach");
     veggie.add("bok choy");
-//    veggie.add(null); UNCOMMENT TO TEST NULL CASES THIS SHOULD THROW BACK
+//    veggie.add(null); UNCOMMENT TO TEST NULL CASES THIS SHOULD BE THROWN BACK
     System.out.println("Your veggies are: \n" + veggie.toString() + "\n");
 
     // TESTING SETTING
