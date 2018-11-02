@@ -10,7 +10,10 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   // SET METHOD
   public T set(int index, T element){
     if (element == null){
-      throw new IllegalArgumentException("Cannot take null values!");
+      throw new IllegalArgumentException("We can't have null values dummy!");
+    }
+    if (index > this.size() - 1){
+      throw new IndexOutOfBoundsException("Are you SURE we can have that index?");
     }
     else{
       return super.set(index, element);
@@ -20,7 +23,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   // ADD METHODS
   public boolean add(T element){
     if (element == null){
-      throw new IllegalArgumentException("Cannot take null values!");
+      throw new IllegalArgumentException("We can't have null values dummy!");
     }
     else{
       return super.add(element);
@@ -28,7 +31,10 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   }
   public void add(int index, T element){
     if (element == null){
-      throw new IllegalArgumentException("Cannot take null values!");
+      throw new IllegalArgumentException("We can't have null values dummy!");
+    }
+    if (index > this.size() - 1){
+      throw new IndexOutOfBoundsException("Are you SURE we can have that index?");
     }
     else{
       super.add(index, element);
