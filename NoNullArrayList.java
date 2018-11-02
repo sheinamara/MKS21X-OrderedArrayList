@@ -18,14 +18,6 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   }
 
   // ADD METHODS
-  public void add(int index, T element){
-    if (element == null){
-      throw new IllegalArgumentException("Cannot take null values!");
-    }
-    else{
-      super.add(index, element);
-    }
-  }
   public boolean add(T element){
     if (element == null){
       throw new IllegalArgumentException("Cannot take null values!");
@@ -34,5 +26,12 @@ public class NoNullArrayList<T> extends ArrayList<T>{
       return super.add(element);
     }
   }
-
+  public void add(int index, T element){
+    if (element == null){
+      throw new IllegalArgumentException("Cannot take null values!");
+    }
+    else{
+      super.add(index, element);
+    }
+  }
 }
