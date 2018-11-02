@@ -8,9 +8,10 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
 
   // SET METHOD
   public T set(int index, T element){
+    T whatToReturn = this.get(index);
     remove(index);
-    add(index, element);
-    return element;
+    add(element);
+    return whatToReturn;
   }
 
   // ADD METHODS
@@ -21,7 +22,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
         return true;
       }
     }
-    return false;
+    return super.add(element);
   }
   public void add(int index, T element){
     add(element);
